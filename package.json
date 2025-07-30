@@ -1,0 +1,24 @@
+{
+  "name": "typographix-final",
+  "version": "1.0.0",
+  "description": "In this version I started to transform a simple animation text reciver into a complete web project",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass-dev":"sass --watch --source-map scss/main.scss:css/style.css",
+    "sass-prod":"sass --no-source-map style=compressed scss/main.scss:css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/insightvigil/typographix-final.git"
+  },
+  "author": "Adrián Vigil",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/insightvigil/typographix-final/issues"
+  },
+  "homepage": "https://github.com/insightvigil/typographix-final#readme",
+  "devDependencies": {
+    "sass": "^1.89.2"
+  }
+}

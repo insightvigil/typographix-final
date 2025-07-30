@@ -7,8 +7,8 @@
     <!-- Grab Favicon -->
     <link rel="icon" type="image/png" href="">
     <!-- Style -->
-    <link rel="stylesheet" type="text/css" href="./scrollbar.css">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    
     <!-- FontAwesome free icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,104 +16,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Navigation -->
-    <aside>
-        <div class="menu" onclick="toggleMenu()">
-            <div class="bar1"></div>
-            <div class="bar2"></div>
-            <div class="bar3"></div>
-        </div>
-
-        <nav id="nav">
-            <ul>
-                    <li><a href="#section-1" onclick="hideMenu()">Home</a></li>
-                    <li><a href="#section-2" onclick="hideMenu()">About</a></li>
-                    <li><a href="#section-3" onclick="hideMenu()">Gallery</a></li>
-                    <li><a href="#section-4" onclick="hideMenu()">Blog</a></li>
-                    <li><a href="#section-5" onclick="hideMenu()">Contact</a></li>
-            </ul>
-            
-        </nav>
-    </aside>
-    <!-- Section 1 -->
-    <section id="section-1">
-        <header>
-            <h1 class="header__title">Typographix</h1>
-        </header>
-        <main>
-            <div class="main__icons">
-                <i class="fa-brands fa-facebook fa-xl" title="facebook"></i>
-                <i class="fa-brands fa-instagram fa-xl" title="instagram"></i>
-                <i class="fa-brands fa-x-twitter fa-xl" title="twitter"></i>
-                <i class="fa-brands fa-youtube fa-xl" title="youtube"></i>
-                <i class="fa-brands fa-github fa-xl" title="github"></i>
-            </div>
-        </main>
-            <!-- Dark Mode Switch -->
-        <div id="theme-switcher" class="theme-switcher">
-            <span class="toggle-text">Light Mode</span>
-            <i class="fas fa-sun"></i>
-        </div>  
-    </section>
-
-    <!-- Section 2 -->
-    <section id="section-2">
-        <h2>Cutting Edge Image & Text Generation</h2>
-        <img class="main-image" src="https://unsplash.com/photos/p0j-mE6mGo4/download?ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzUyNDE2MjQ0fA&force=true&w=2400" alt="">
-    </section>
-
-    <!-- Section 3 -->
-    <section id="section-3">
-        <h2>Gallery (Comming Soon)</h2>
-        <div class="image-container">
-            <img class="small-image" src="https://unsplash.com/photos/p0j-mE6mGo4/download?ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzUyNDE2MjQ0fA&force=true&w=2400" alt="">
-            <img class="small-image" src="https://unsplash.com/photos/p0j-mE6mGo4/download?ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzUyNDE2MjQ0fA&force=true&w=2400" alt="">
-            <img class="small-image" src="https://unsplash.com/photos/p0j-mE6mGo4/download?ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzUyNDE2MjQ0fA&force=true&w=2400" alt="">
-        </div>
-    </section>
-    <!-- Section 4-->
-    <section id="section-4">
-        <h2>Blog Updates (Coming Soon)</h2>
-        <div class="blog-container">
-            <article class="blog-item">
-                <h3><a href="/">Blog Item 1 Here</a></h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic aliquam praesentium minima doloremque dolorum dicta fuga iusto placeat. Illum quasi earum reprehenderit accusantium repellat nihil aperiam sit nostrum deserunt explicabo.</p>
-            </article>
-
-            <article class="blog-item">
-                <h3><a href="/">Blog Item 1 Here</a></h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic aliquam praesentium minima doloremque dolorum dicta fuga iusto placeat. Illum quasi earum reprehenderit accusantium repellat nihil aperiam sit nostrum deserunt explicabo.</p>
-            </article>
-
-            <article class="blog-item">
-                <h3><a href="/">Blog Item 1 Here</a></h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic aliquam praesentium minima doloremque dolorum dicta fuga iusto placeat. Illum quasi earum reprehenderit accusantium repellat nihil aperiam sit nostrum deserunt explicabo.</p>
-            </article>
-        </div>
-    </section>
-
-    <!-- Section 5-->
-    <section id="section-5">
-        <h2><a href="mailto:example@example.com">Contact Us</a></h2>
-
-        <!--SVG-->
-        <div class="wave">
-            
-            
-            <svg  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#1a1952" fill-opacity="1" d="M0,32L0,64L57.6,64L57.6,32L115.2,32L115.2,256L172.8,256L172.8,32L230.4,32L230.4,256L288,256L288,128L345.6,128L345.6,160L403.2,160L403.2,224L460.8,224L460.8,64L518.4,64L518.4,128L576,128L576,32L633.6,32L633.6,32L691.2,32L691.2,96L748.8,96L748.8,256L806.4,256L806.4,288L864,288L864,64L921.6,64L921.6,128L979.2,128L979.2,64L1036.8,64L1036.8,288L1094.4,288L1094.4,32L1152,32L1152,224L1209.6,224L1209.6,192L1267.2,192L1267.2,128L1324.8,128L1324.8,224L1382.4,224L1382.4,32L1440,32L1440,320L1382.4,320L1382.4,320L1324.8,320L1324.8,320L1267.2,320L1267.2,320L1209.6,320L1209.6,320L1152,320L1152,320L1094.4,320L1094.4,320L1036.8,320L1036.8,320L979.2,320L979.2,320L921.6,320L921.6,320L864,320L864,320L806.4,320L806.4,320L748.8,320L748.8,320L691.2,320L691.2,320L633.6,320L633.6,320L576,320L576,320L518.4,320L518.4,320L460.8,320L460.8,320L403.2,320L403.2,320L345.6,320L345.6,320L288,320L288,320L230.4,320L230.4,320L172.8,320L172.8,320L115.2,320L115.2,320L57.6,320L57.6,320L0,320L0,320Z"></path>
-            </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#1a1952" fill-opacity="1" d="M0,256L0,32L90,32L90,224L180,224L180,64L270,64L270,288L360,288L360,192L450,192L450,96L540,96L540,256L630,256L630,256L720,256L720,160L810,160L810,128L900,128L900,128L990,128L990,320L1080,320L1080,32L1170,32L1170,96L1260,96L1260,160L1350,160L1350,256L1440,256L1440,320L1350,320L1350,320L1260,320L1260,320L1170,320L1170,320L1080,320L1080,320L990,320L990,320L900,320L900,320L810,320L810,320L720,320L720,320L630,320L630,320L540,320L540,320L450,320L450,320L360,320L360,320L270,320L270,320L180,320L180,320L90,320L90,320L0,320L0,320Z"></path></svg>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#00509D" fill-opacity="1" d="M0,224L0,192L90,192L90,256L180,256L180,64L270,64L270,160L360,160L360,32L450,32L450,288L540,288L540,256L630,256L630,320L720,320L720,160L810,160L810,192L900,192L900,96L990,96L990,192L1080,192L1080,224L1170,224L1170,320L1260,320L1260,64L1350,64L1350,0L1440,0L1440,320L1350,320L1350,320L1260,320L1260,320L1170,320L1170,320L1080,320L1080,320L990,320L990,320L900,320L900,320L810,320L810,320L720,320L720,320L630,320L630,320L540,320L540,320L450,320L450,320L360,320L360,320L270,320L270,320L180,320L180,320L90,320L90,320L0,320L0,320Z"></path></svg>
-        </div>
-        <!-- Footer -->
-        <footer class="footer"> 
-            <small>&copy; 2025 Typographix. All rights reserved </small>
-        </footer>
-    </section>
-
     
 
     
+
+    <!-- Script -->
     <script src="./script.js"></script>
     <script src="https://kit.fontawesome.com/f53a1cf40f.js" crossorigin="anonymous"></script>
 </body>
