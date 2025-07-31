@@ -19,8 +19,13 @@ document.addEventListener('DOMContentLoaded', () =>{
     }
 
     //Create observers for diferent sections
-    createObserver('#about .phrase', { root: null, threshold: 1}, 'active');
+createObserver('#about .phrase', { root: null, threshold: 1}, 'active');
+createObserver('#gallery .image-box', { root: null, threshold: 0.5}, 'active');
+createObserver('#blog .featured-article, #blog .article', { root: null, threshold: 0.3}, 'fadeInUp');
+createObserver('#contact > div', { root: null, threshold: 0.7}, 'fadeInUp');
 });
+
+
 
 
 /*----------Navigation---------*/ 
