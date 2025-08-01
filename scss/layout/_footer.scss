@@ -1,0 +1,27 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+/*Footer Section */
+
+footer {
+     @include flex-center(column);
+     background: $background;
+     color: $secondary-font-color;
+     padding: 20px 0;
+     font-size: 1.6rem;
+     position: relative;
+     z-index: 9;
+
+    .social-icons {
+        top: 10px;
+
+        a{
+            margin: 0 10px;
+            color: $secondary-font-color;
+            font-size: 1.6rem;
+
+            &:hover {
+                color: lighten($secondary-font-color, 20%);
+            }
+        }
+    }
+}
