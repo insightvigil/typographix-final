@@ -30,17 +30,23 @@ createObserver('#contact > div', { root: null, threshold: 0.7}, 'fadeInUp');
 
 /*----------Navigation---------*/ 
 const nav = document.getElementById('nav');
-console.log(nav)
 const menuIcon = document.getElementsByClassName('menu')[0];
-console.log(menuIcon)
+const listItems = document.querySelectorAll('#nav ul li a');
+
+
 function toggleMenu() {
     nav.classList.toggle("active")
     menuIcon.classList.toggle("active");
+    listItems.forEach((listItems) => {
+    listItems.classList.toggle('active');
+
+    });
 }
 
 function hideMenu() {
     nav.classList.remove("active");
     menuIcon.classList.remove("active");
+    listItems.classList.remove('active');
 }
 
 //Form submission
