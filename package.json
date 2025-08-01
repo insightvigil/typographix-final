@@ -5,8 +5,8 @@
   "main": "script.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "sass-dev":"sass --watch --source-map scss/main.scss:css/style.css",
-    "sass-prod":"sass --no-source-map style=compressed scss/main.scss:css/style.css"
+    "sass-dev":"sass --watch --source-map scss/main.scss css/style.css",
+    "sass-prod":"sass --no-source-map --style=compressed scss/main.scss css/style.css"
   },
   "repository": {
     "type": "git",

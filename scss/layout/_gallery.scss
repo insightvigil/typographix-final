@@ -91,6 +91,10 @@
 
         h3 {
             color: $secondary-font-color;
+
+            @include smartphone-vertical {
+                font-size: 1.8rem;
+            }
         }
     }
 
