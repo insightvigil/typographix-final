@@ -19,6 +19,10 @@
         @include tablet-vertical {
             @include mobile-gallery-container(10vh);
         }
+
+        @include smartphone-small {
+            padding-bottom: 20vh;
+        }
     }
 
     

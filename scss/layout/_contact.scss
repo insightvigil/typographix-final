@@ -2,15 +2,24 @@
 @use '../mixins' as *;
 /*Contact Section*/
 #contact {
-     @extend %section;
-     display: grid;
-     place-items: center;
+    @extend %section;
+    display: grid;
+    place-items: center;
 
-     .contact-container {
+    .contact-container {
         opacity: 0;
+
+        @include smartphone-small {
+            padding-top: 10vh;
+        }
 
         h2 {
             font-size: clamp(2rem, 5vw, 3rem);
+            margin-bottom: 20px;
+
+            @include smartphone-small {
+            font-size: 2.4rem;
+        }
         }
 
         .form-container {
@@ -27,7 +36,12 @@
                 display: grid;
                 grid-template-columns: repeat(2,1fr);
                 gap: 20px;
+            
+            @include smartphone-vertical {
+                grid-template-columns: 1fr;
+                gap: 10px;
             }
+            
 
             .form-group {
                 display: flex;
@@ -48,6 +62,8 @@
                 }
             }
 
+            }
+
             .message {
             label {
                 font-size: 1.6rem;
@@ -63,6 +79,9 @@
                 height: 200px;
                 resize: vertical;
 
+                @include smartphone-small {
+                    height: 100px;
+                }
                 &:focus {
                         outline: none;
                         background: darken($input-background, 10%);
@@ -92,7 +111,6 @@
         }
 
         
-     }
-     
+    } 
 }
 

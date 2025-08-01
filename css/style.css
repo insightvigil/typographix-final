@@ -31,7 +31,7 @@
   margin-bottom: 15px;
 }
 
-#contact .contact-container form .form-group input, #contact .contact-container form .message textarea {
+#contact .contact-container form .grid-container .form-group input, #contact .contact-container form .message textarea {
   background: #525252;
   border: none;
   border-radius: 8px;
@@ -129,7 +129,7 @@
   height: 100%;
   overflow: hidden;
   opacity: 0;
-  z-index: 0;
+  z-index: 2;
 }
 .nav-wrapper #nav .strip {
   position: absolute;
@@ -171,15 +171,15 @@
   transform: translateY(0);
 }
 .nav-wrapper #nav ul {
+  list-style: none;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  list-style: none;
   position: relative;
-  top: 15%;
   z-index: 10;
-  transform: translateY(0);
+  top: 50%;
+  transform: translateY(-100%);
   transition: transform 0.5s ease;
 }
 .nav-wrapper #nav ul li {
@@ -214,7 +214,7 @@
   border-bottom: 1px solid rgb(230, 230, 230);
 }
 .nav-wrapper #nav.active ul {
-  transform: translateY(0);
+  transform: translateY(-50%);
 }
 .nav-wrapper #nav.active ul li {
   opacity: 1;
@@ -253,6 +253,11 @@
     font-size: 9rem;
   }
 }
+@media (max-width: 600px) {
+  .overlay h1 {
+    font-size: 6rem;
+  }
+}
 @keyframes colorChange {
   from {
     color: #636363;
@@ -270,6 +275,11 @@
 @media (orientation: portrait) and (max-width: 1181px) {
   .overlay p {
     font-size: 3rem;
+  }
+}
+@media (max-width: 600px) {
+  .overlay p {
+    font-size: 2.5rem;
   }
 }
 
@@ -395,6 +405,11 @@ body {
     padding-bottom: 10vh;
   }
 }
+@media (orientation: portrait) and (max-height: 700px) {
+  #gallery .gallery-container {
+    padding-bottom: 20vh;
+  }
+}
 #gallery .image-box {
   width: 300px;
   margin-right: 10px;
@@ -515,6 +530,11 @@ body {
   color: rgb(200, 200, 200);
   font-weight: 900;
 }
+@media (max-width: 600px) {
+  .featured-article h3 {
+    font-size: 3rem;
+  }
+}
 .featured-article p {
   font-size: 1.92rem;
   color: rgb(150, 150, 150);
@@ -525,6 +545,12 @@ body {
 }
 @media (orientation: portrait) and (max-width: 1181px) {
   .article {
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 600px) {
+  .article {
+    margin: 0;
     margin-bottom: 20px;
   }
 }
@@ -579,8 +605,19 @@ body {
 #contact .contact-container {
   opacity: 0;
 }
+@media (orientation: portrait) and (max-height: 700px) {
+  #contact .contact-container {
+    padding-top: 10vh;
+  }
+}
 #contact .contact-container h2 {
   font-size: clamp(2rem, 5vw, 3rem);
+  margin-bottom: 20px;
+}
+@media (orientation: portrait) and (max-height: 700px) {
+  #contact .contact-container h2 {
+    font-size: 2.4rem;
+  }
 }
 #contact .contact-container .form-container {
   background: rgb(31, 31, 31);
@@ -595,16 +632,22 @@ body {
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
 }
-#contact .contact-container form .form-group {
+@media (max-width: 600px) {
+  #contact .contact-container form .grid-container {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+}
+#contact .contact-container form .grid-container .form-group {
   display: flex;
   flex-direction: column;
 }
-#contact .contact-container form .form-group label {
+#contact .contact-container form .grid-container .form-group label {
   color: white;
   margin-bottom: 5px;
   font-size: 1.6rem;
 }
-#contact .contact-container form .form-group input:focus {
+#contact .contact-container form .grid-container .form-group input:focus {
   outline: none;
   background: rgb(56.5, 56.5, 56.5);
 }
@@ -619,6 +662,11 @@ body {
   margin: 20px 20px 0 0;
   height: 200px;
   resize: vertical;
+}
+@media (orientation: portrait) and (max-height: 700px) {
+  #contact .contact-container form .message textarea {
+    height: 100px;
+  }
 }
 #contact .contact-container form .message textarea:focus {
   outline: none;

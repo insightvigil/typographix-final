@@ -1,4 +1,6 @@
 document.addEventListener('DOMContentLoaded', () =>{
+
+    const isMobile = window = window.innerWidth <= 1025;
     //Function to create and obser Intersection Observers
     function createObserver(selector, observerOptions, toggleClass){
         const items = document.querySelectorAll(selector);
@@ -19,10 +21,10 @@ document.addEventListener('DOMContentLoaded', () =>{
     }
 
     //Create observers for diferent sections
-createObserver('#about .phrase', { root: null, threshold: 1}, 'active');
-createObserver('#gallery .image-box', { root: null, threshold: 0.5}, 'active');
-createObserver('#blog .featured-article, #blog .article', { root: null, threshold: 0.3}, 'fadeInUp');
-createObserver('#contact > div', { root: null, threshold: 0.7}, 'fadeInUp');
+createObserver('#about .phrase', { root: null, threshold: isMobile ? 0.5 : 1}, 'active');
+createObserver('#gallery .image-box', { root: null, threshold: isMobile ? 0 : 0.3}, 'active');
+createObserver('#blog .featured-article, #blog .article', { root: null, threshold: isMobile ? 0 : 0.3}, 'fadeInUp');
+createObserver('#contact > div', { root: null, threshold: isMobile ? 0 : 0.7}, 'fadeInUp');
 });
 
 
@@ -34,19 +36,23 @@ const menuIcon = document.getElementsByClassName('menu')[0];
 const listItems = document.querySelectorAll('#nav ul li a');
 
 
+
 function toggleMenu() {
     nav.classList.toggle("active")
     menuIcon.classList.toggle("active");
     listItems.forEach((listItems) => {
     listItems.classList.toggle('active');
-
     });
 }
 
 function hideMenu() {
+    
+    
     nav.classList.remove("active");
     menuIcon.classList.remove("active");
-    listItems.classList.remove('active');
+    for (item of listItems) {
+        item.classList.remove("active");
+    }
 }
 
 //Form submission

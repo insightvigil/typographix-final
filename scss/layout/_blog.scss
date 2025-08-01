@@ -40,6 +40,10 @@
     h3 {
         @include blog-title(4.0rem);
         font-weight:900;
+
+        @include smartphone-vertical {
+            font-size: 3.0rem;
+        }
     }
 
     p {
@@ -60,6 +64,12 @@
 
     @include tablet-vertical {
         margin-bottom: 20px;
+    }
+
+    @include smartphone-vertical {
+        margin:0;
+        margin-bottom: 20px;
+
     }
 
     h3 {
