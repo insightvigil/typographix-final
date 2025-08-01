@@ -44,6 +44,10 @@
         @include smartphone-vertical {
             font-size: 3.0rem;
         }
+
+        @include smartphone-horizontal {
+            font-size: 3.0rem;
+        }
     }
 
     p {
@@ -72,6 +76,11 @@
 
     }
 
+    @include smartphone-horizontal {
+        margin: 0;
+        margin-bottom: 20px;
+    }
+
     h3 {
         @include blog-title(2.0rem)
     }
@@ -91,6 +100,10 @@
     @include tablet-vertical{
         flex-direction: column;
 
+    }
+
+    @include smartphone-horizontal {
+        flex-direction: column;
     }
 
     img {

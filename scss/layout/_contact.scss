@@ -13,6 +13,10 @@
             padding-top: 10vh;
         }
 
+        @include smartphone-horizontal {
+            padding-top: 15vh;
+        }
+
         h2 {
             font-size: clamp(2rem, 5vw, 3rem);
             margin-bottom: 20px;
@@ -82,6 +86,11 @@
                 @include smartphone-small {
                     height: 100px;
                 }
+
+                @include smartphone-horizontal {
+                    height: 100px;
+                }
+
                 &:focus {
                         outline: none;
                         background: darken($input-background, 10%);

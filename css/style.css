@@ -219,6 +219,11 @@
 .nav-wrapper #nav.active ul li {
   opacity: 1;
 }
+@media (orientation: landscape) and (max-height: 450px) {
+  .nav-wrapper #nav.active ul li a {
+    font-size: 3rem;
+  }
+}
 
 /*Home Section*/
 /* Video */
@@ -286,6 +291,12 @@
 /* About Section */
 #about {
   height: 100vh;
+}
+@media (orientation: landscape) and (max-height: 450px) {
+  #about {
+    padding-top: 15vh;
+    padding: 15vh;
+  }
 }
 #about .about-container {
   display: grid;
@@ -410,6 +421,14 @@ body {
     padding-bottom: 20vh;
   }
 }
+@media (orientation: landscape) and (max-height: 450px) {
+  #gallery .gallery-container {
+    flex-direction: column;
+    height: auto;
+    top: 100px;
+    padding-bottom: 30vh;
+  }
+}
 #gallery .image-box {
   width: 300px;
   margin-right: 10px;
@@ -424,6 +443,11 @@ body {
   animation: levitation 4s ease-in-out infinite;
 }
 @media (orientation: portrait) and (max-width: 1181px) {
+  #gallery .image-box.tall {
+    animation: none;
+  }
+}
+@media (orientation: landscape) and (max-height: 450px) {
   #gallery .image-box.tall {
     animation: none;
   }
@@ -489,6 +513,16 @@ body {
     transform: scale(1);
   }
 }
+@media (orientation: landscape) and (max-height: 450px) {
+  #gallery .image-box, #gallery .text-box {
+    width: 95%;
+    margin-right: unset;
+    margin: auto;
+    margin-bottom: 10px;
+    opacity: 1;
+    transform: scale(1);
+  }
+}
 
 /*Blog Section*/
 #blog {
@@ -535,6 +569,11 @@ body {
     font-size: 3rem;
   }
 }
+@media (orientation: landscape) and (max-height: 450px) {
+  .featured-article h3 {
+    font-size: 3rem;
+  }
+}
 .featured-article p {
   font-size: 1.92rem;
   color: rgb(150, 150, 150);
@@ -549,6 +588,12 @@ body {
   }
 }
 @media (max-width: 600px) {
+  .article {
+    margin: 0;
+    margin-bottom: 20px;
+  }
+}
+@media (orientation: landscape) and (max-height: 450px) {
   .article {
     margin: 0;
     margin-bottom: 20px;
@@ -570,6 +615,11 @@ body {
   justify-content: space-between;
 }
 @media (orientation: portrait) and (max-width: 1181px) {
+  .smaller-articles {
+    flex-direction: column;
+  }
+}
+@media (orientation: landscape) and (max-height: 450px) {
   .smaller-articles {
     flex-direction: column;
   }
@@ -608,6 +658,11 @@ body {
 @media (orientation: portrait) and (max-height: 700px) {
   #contact .contact-container {
     padding-top: 10vh;
+  }
+}
+@media (orientation: landscape) and (max-height: 450px) {
+  #contact .contact-container {
+    padding-top: 15vh;
   }
 }
 #contact .contact-container h2 {
@@ -664,6 +719,11 @@ body {
   resize: vertical;
 }
 @media (orientation: portrait) and (max-height: 700px) {
+  #contact .contact-container form .message textarea {
+    height: 100px;
+  }
+}
+@media (orientation: landscape) and (max-height: 450px) {
   #contact .contact-container form .message textarea {
     height: 100px;
   }

@@ -147,6 +147,7 @@
                     text-decoration: none;
                     color: $nav-font-color;
 
+                    
 
                     &:hover {
                         font-weight: 300;
@@ -163,6 +164,12 @@
 
                 li {
                     opacity: 1;
+
+                    a {
+                        @include smartphone-horizontal {
+                        font-size: 3.0rem;
+                        }   
+                    }
                 }
             }
     }

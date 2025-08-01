@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () =>{
 createObserver('#about .phrase', { root: null, threshold: isMobile ? 0.5 : 1}, 'active');
 createObserver('#gallery .image-box', { root: null, threshold: isMobile ? 0 : 0.3}, 'active');
 createObserver('#blog .featured-article, #blog .article', { root: null, threshold: isMobile ? 0 : 0.3}, 'fadeInUp');
-createObserver('#contact > div', { root: null, threshold: isMobile ? 0 : 0.7}, 'fadeInUp');
+createObserver('#contact > div', { root: null, threshold: isMobile ? 0.3 : 0.7}, 'fadeInUp');
 });
 
 

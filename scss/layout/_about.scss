@@ -5,6 +5,11 @@
 #about {
     @extend %section; 
     height: 100vh;
+
+    @include smartphone-horizontal {
+        padding-top: 15vh;
+        padding: 15vh;
+    }
     
     .about-container {
         display: grid;
