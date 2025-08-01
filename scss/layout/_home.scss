@@ -36,6 +36,10 @@
         animation: colorChange 1.5s ease-in-out infinite alternate;
         font-weight: 600;
 
+        @include tablet-vertical {
+            font-size: 9.0rem;
+        }
+
         @keyframes colorChange {
         from {
             color: darken($primary-font-color, 20%);
@@ -53,6 +57,10 @@
         position: relative;
         font-size: clamp(1rem, 5vw, 1.5rem);
         font-weight: 200;
+
+        @include tablet-vertical {
+            font-size: 3.0rem;
+        }
     }
     
     

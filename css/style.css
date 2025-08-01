@@ -39,6 +39,8 @@
   color: white;
 }
 
+/*Tablet*/
+/*Phone*/
 .fadeInUp {
   animation: fadeInUp 1s ease forwards;
 }
@@ -65,16 +67,31 @@
   z-index: 10;
   height: 60px;
 }
+@media (max-width: 1250px) {
+  .nav-wrapper {
+    background-color: rgb(18, 18, 18);
+  }
+}
 .nav-wrapper .nav-left h1 {
   font-size: 3rem;
   color: #b3b3b3;
   font-weight: 300;
+}
+@media (max-width: 1250px) {
+  .nav-wrapper .nav-left h1 {
+    font-size: 2.5rem;
+  }
 }
 .nav-wrapper .nav-left h1 span {
   color: white;
   font-weight: 600;
   margin: 0 5px;
   position: relative;
+}
+@media (max-width: 1250px) {
+  .nav-wrapper .nav-left h1 span {
+    font-size: 2.5rem;
+  }
 }
 .nav-wrapper .nav-right .menu {
   position: absolute;
@@ -231,6 +248,11 @@
   animation: colorChange 1.5s ease-in-out infinite alternate;
   font-weight: 600;
 }
+@media (orientation: portrait) and (max-width: 1181px) {
+  .overlay h1 {
+    font-size: 9rem;
+  }
+}
 @keyframes colorChange {
   from {
     color: #636363;
@@ -244,6 +266,11 @@
   position: relative;
   font-size: clamp(1rem, 5vw, 1.5rem);
   font-weight: 200;
+}
+@media (orientation: portrait) and (max-width: 1181px) {
+  .overlay p {
+    font-size: 3rem;
+  }
 }
 
 /* About Section */
@@ -259,10 +286,32 @@
 #about .about-container h2 {
   font-size: clamp(2rem, 5vw, 3rem);
 }
+@media (orientation: landscape) and (max-width: 1181px) {
+  #about .about-container h2 {
+    margin-left: 5%;
+  }
+}
+@media (orientation: portrait) and (max-width: 1181px) {
+  #about .about-container h2 {
+    margin-left: 5%;
+  }
+}
 #about .about-container p {
   width: 75ch;
   font-size: clamp(1rem, 5vw, 1.5rem);
   line-height: 1.8;
+}
+@media (orientation: landscape) and (max-width: 1181px) {
+  #about .about-container p {
+    width: 90%;
+    margin-left: 5%;
+  }
+}
+@media (orientation: portrait) and (max-width: 1181px) {
+  #about .about-container p {
+    width: 90%;
+    margin-left: 5%;
+  }
 }
 #about .about-container .phrase {
   color: #636363;
@@ -333,11 +382,18 @@ body {
   position: relative;
   top: 50px;
 }
-#gallery .image-box, #gallery .text-box {
-  border-radius: 10px;
+@media (max-width: 1250px) {
+  #gallery .gallery-container {
+    margin: 0 2.5%;
+  }
 }
-#gallery .image-box:not(:last-child), #gallery .text-box:not(:last-child) {
-  margin-bottom: 10px;
+@media (orientation: portrait) and (max-width: 1181px) {
+  #gallery .gallery-container {
+    flex-direction: column;
+    height: auto;
+    top: 100px;
+    padding-bottom: 10vh;
+  }
 }
 #gallery .image-box {
   width: 300px;
@@ -351,6 +407,11 @@ body {
 #gallery .image-box.tall {
   height: 600px;
   animation: levitation 4s ease-in-out infinite;
+}
+@media (orientation: portrait) and (max-width: 1181px) {
+  #gallery .image-box.tall {
+    animation: none;
+  }
 }
 @keyframes levitation {
   0%, 100% {
@@ -397,6 +458,22 @@ body {
 #gallery .text-box h3 {
   color: rgb(200, 200, 200);
 }
+#gallery .image-box, #gallery .text-box {
+  border-radius: 10px;
+}
+#gallery .image-box:not(:last-child), #gallery .text-box:not(:last-child) {
+  margin-bottom: 10px;
+}
+@media (orientation: portrait) and (max-width: 1181px) {
+  #gallery .image-box, #gallery .text-box {
+    width: 95%;
+    margin-right: unset;
+    margin: auto;
+    margin-bottom: 10px;
+    opacity: 1;
+    transform: scale(1);
+  }
+}
 
 /*Blog Section*/
 #blog {
@@ -410,6 +487,12 @@ body {
 .blog-container {
   width: 100%;
   padding: 50px;
+}
+@media (max-width: 1250px) {
+  .blog-container {
+    width: 100%;
+    padding: 5%;
+  }
 }
 .blog-container a {
   font-size: 1.6rem;
@@ -440,6 +523,11 @@ body {
 .article {
   opacity: 0;
 }
+@media (orientation: portrait) and (max-width: 1181px) {
+  .article {
+    margin-bottom: 20px;
+  }
+}
 .article h3 {
   font-size: 2rem;
   margin: 15px 0;
@@ -454,6 +542,11 @@ body {
 .smaller-articles {
   display: flex;
   justify-content: space-between;
+}
+@media (orientation: portrait) and (max-width: 1181px) {
+  .smaller-articles {
+    flex-direction: column;
+  }
 }
 .smaller-articles img {
   min-height: 300px;
@@ -470,9 +563,6 @@ body {
   }
   .featured-article h1 {
     font-size: 2.2rem;
-  }
-  .smaller-articles {
-    flex-direction: column;
   }
 }
 /* Smartphone Vertical */

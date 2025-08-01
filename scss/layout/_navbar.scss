@@ -13,17 +13,29 @@
     z-index: 10;
     height: 60px;
 
+    @include tablet-horizontal-large {
+        background-color: $background;
+    }
+
     .nav-left {
             h1 {
                 font-size: 3rem ;
                 color: darken($nav-font-color,20%);
                 font-weight: 300;
 
+                @include tablet-horizontal-large {
+                    font-size: 2.5rem;
+                }
+
                 span {
                     color: lighten($nav-font-color, 10%);
                     font-weight: 600;
                     margin: 0 5px;
                     position: relative;
+
+                    @include tablet-horizontal-large {
+                    font-size: 2.5rem;
+                    }
                     
                 }
             }
@@ -99,7 +111,7 @@
             position: fixed;
             top: 0;
             left: 0;
-
+            
             .strip {
                 transform: translateY(0);
             }
@@ -113,6 +125,8 @@
             z-index: 10;
             transform: translateY(0);
             transition: transform 0.5s ease;
+
+            
 
             li {
                 margin: 1rem 0;
@@ -133,6 +147,7 @@
                     text-decoration: none;
                     color: $nav-font-color;
 
+
                     &:hover {
                         font-weight: 300;
                         padding-bottom: 10px;
@@ -144,6 +159,7 @@
 
         &.active ul {
                 transform: translateY(0);
+                
 
                 li {
                     opacity: 1;
